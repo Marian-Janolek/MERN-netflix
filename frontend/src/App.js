@@ -11,7 +11,7 @@ import {
 import Watch from './pages/watch/Watch';
 
 function App() {
-  const user = false;
+  const user = true;
   return (
     <Router>
       <Switch>
