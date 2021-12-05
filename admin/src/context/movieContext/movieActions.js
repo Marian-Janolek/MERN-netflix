@@ -5,6 +5,12 @@ import {
   DELETE_MOVIE_FAIL,
   DELETE_MOVIE_SUCCESS,
   DELETE_MOVIE_START,
+  CREATE_MOVIE_FAIL,
+  CREATE_MOVIE_START,
+  CREATE_MOVIE_SUCCESS,
+  UPDATE_MOVIE_SUCCESS,
+  UPDATE_MOVIE_START,
+  UPDATE_MOVIE_FAIL,
 } from '../';
 
 // get movies
@@ -28,4 +34,26 @@ export const deleteMovieSuccess = (id) => ({
 });
 export const deleteMovieFail = () => ({
   type: DELETE_MOVIE_FAIL,
+});
+// create movie
+export const createMovieStart = () => ({
+  type: CREATE_MOVIE_START,
+});
+export const createMovieSuccess = (movie) => ({
+  type: CREATE_MOVIE_SUCCESS,
+  payload: movie,
+});
+export const createMovieFail = () => ({
+  type: CREATE_MOVIE_FAIL,
+});
+// update movie
+export const updateMovieStart = () => ({
+  type: CREATE_MOVIE_START,
+});
+export const updateMovieSuccess = (movie) => ({
+  type: CREATE_MOVIE_SUCCESS,
+  payload: movie,
+});
+export const updateMovieFail = () => ({
+  type: CREATE_MOVIE_FAIL,
 });
