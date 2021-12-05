@@ -1,6 +1,6 @@
 import './register.scss';
 import { useState, useRef } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import axios from 'axios';
 
 const Register = () => {
@@ -33,7 +33,9 @@ const Register = () => {
             alt=""
             className="logo"
           />
-          <button className="loginButton">Sing In</button>
+          <Link to="/login">
+            <button className="loginButton">Sing In</button>
+          </Link>
         </div>
       </div>
       <div className="container">

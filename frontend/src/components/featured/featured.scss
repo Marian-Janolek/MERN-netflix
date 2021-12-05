@@ -44,6 +44,10 @@
         width: 60vw;
       }
     }
+    .title {
+      font-size: 32px;
+      font-weight: 600;
+    }
     .desc {
       margin: 20px 0;
       @include mobile {
