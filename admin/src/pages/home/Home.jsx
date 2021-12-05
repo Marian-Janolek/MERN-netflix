@@ -33,7 +33,7 @@ export default function Home() {
         const { data } = await axios.get('users/stats', {
           headers: {
             token:
-              'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYWExOTExOGVkODk3ZTRmOTFmNDg3YyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzODYxOTg1MiwiZXhwIjoxNjM4NzA2MjUyfQ.C8kqs1N77S49fq-4EyzJ-kseAipFK324jqZS03cHRDs',
+              'Bearer ' + JSON.parse(localStorage.getItem('user')).accessToken,
           },
         });
         const statsList = data.sort(function (a, b) {
