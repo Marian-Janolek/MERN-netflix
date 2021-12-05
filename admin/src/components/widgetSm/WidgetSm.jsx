@@ -22,7 +22,6 @@ export default function WidgetSm() {
     };
     getNewUsers();
   }, []);
-  console.log(newUsers);
 
   return (
     <div className="widgetSm">
@@ -30,7 +29,7 @@ export default function WidgetSm() {
       <ul className="widgetSmList">
         {newUsers?.users?.map((user) => {
           return (
-            <li className="widgetSmListItem">
+            <li className="widgetSmListItem" key={user._id}>
               <img
                 src={
                   user.profilePic ||
