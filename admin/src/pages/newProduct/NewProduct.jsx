@@ -29,6 +29,7 @@ export default function NewProduct() {
         (snapshot) => {
           const progress =
             (snapshot.bytesTransfered / snapshot.totalBytes) * 100;
+          console.log('Upload is ' + progress + '% done');
         },
         (err) => {
           console.log(err);
@@ -147,12 +148,7 @@ export default function NewProduct() {
         </div>
         <div className="addProductItem">
           <label>Is Series ?</label>
-          <select
-            name="active"
-            id="isSeries"
-            name="isSeries"
-            onChange={handleChange}
-          >
+          <select id="isSeries" name="isSeries" onChange={handleChange}>
             <option value="false">No</option>
             <option value="true">Yes</option>
           </select>
